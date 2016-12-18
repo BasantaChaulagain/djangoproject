@@ -34,7 +34,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -66,7 +66,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'dm4bhhk1s05fo',
+        'USER': 'pdewthmjkrhixd',
+        'PASSWORD': '07eca89acf3f2ae917b0eefd9c980a83fa82076f71d70bbc47e8cd74f4328834',
+        'HOST': 'ec2-23-21-46-94.compute-1.amazonaws.com',
+        'PORT': '5432',
+        
     }
 }
 
