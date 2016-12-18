@@ -1,0 +1,50 @@
+{% extends 'practicals/base.html' %}
+
+{% block body %}
+    <a href="{% url 'main_menu:index' %}"><img src="../../../media/logo.png" id="websiteLogo"></a>
+        <span id="websiteTitle">New think tank</span>
+    </div>
+    </div>
+    <div class="container">
+    <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <form role="search" method="get" action="{% url 'practicals:index' %}">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="search by title" name="q" value="{{ request.GET.q }}">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default">Search</button>
+                 </span>
+             </div>
+            </form>
+          </div>
+        </div>
+
+        <BR><BR>
+
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+
+<div class="panel-group" id="accordion">
+    {% for subject in subjects  %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}">
+                    {{ subject }}
+                </a>
+            </h4>
+        </div>
+    {% for practical in practicals %}
+        {% if practical.subject == subject %}
+        <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse">
+            <div class="panel-body">
+                <a href="{% url 'practicals:detail' practical.id %}">{{ practical }}</a>
+            </div>
+        </div>
+    </div>{% endif %}
+                  {% endfor %}
+    {% endfor %}
+</div>
+
+{% endblock %}

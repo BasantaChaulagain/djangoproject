@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HomePage</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main_menu/css/bootstrap.css'%} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main_menu/css/bootstrap-glyphicons.css'%} "/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main_menu/css/style.css' %}"/>
+  </head>
+  <body>
+      <div class="row" id="features">
+      <a href="{% url 'practicals:index' %}">
+        <div class="col-sm-6 feature1" > Lab Reports</div></a>
+
+        <a href="#">
+        <div class="col-sm-6 feature2" >Travel Guide</div></a>
+       </div>
+
+       <div class="row" id="features">
+        <a href="#"><div class="col-sm-6 feature3" >
+          Articles</div></a>
+
+        <a href="{% url 'gallery:index' %}">
+        <div class="col-sm-6 feature4" >
+          Gallery</div></a>
+      </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

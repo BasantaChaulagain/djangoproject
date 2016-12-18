@@ -1,0 +1,51 @@
+body
+{
+    background-color: #829356;
+}
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 100%;
+  color: inherit;
+  background-image: url("../images/background.jpg");
+}
+.head
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+#websiteLogo{
+  float: left;
+  width: 100px;
+}
+#websiteLogo img
+{ 
+  width: 80px;
+  height: auto;
+}
+#websiteTitle{
+  left: 200px;
+  font-size: 3.5em;
+  font-family: 'Bungee', cursive;
+  color: #2b669a;
+}
+
+.home-btn
+{
+  float: right;
+}
+.back-btn
+{
+   float: left;
+}
+
+.heading
+{
+  font-size: 2.5em;
+  font-family: 'Tillana', cursive;
+  text-align: center;
+  padding-bottom: 30px;
+}

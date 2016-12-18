@@ -1,0 +1,48 @@
+*{
+    color: white;
+}
+.container
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+#features
+{
+    font-size: 3em;
+    font-family: 'Mogra', cursive;
+    text-align: center;
+}
+.feature1:hover,.feature2:hover,.feature3:hover,.feature4:hover
+{
+    color: white ;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+#features a
+{
+    text-decoration: none;
+}
+div.feature1
+{
+    padding-top: 120px;
+    background-color: #829356;
+    height:320px;
+}
+div.feature2
+{
+    padding-top: 120px;
+    background-color: #107896;
+    height: 320px;
+}
+div.feature3
+{
+    padding-top: 120px;
+    background-color: #C2571A;
+    height:320px;
+}
+div.feature4
+{
+    padding-top: 120px;
+    background-color: #9A2617;
+    height:320px;
+}
