@@ -1,4 +1,6 @@
 import os
+import dj_database_url
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -62,18 +64,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+in_heroku = False
+if 'DATABASE_URL' in os.environ:
+    in_heroku = True
 
-DATABASES = {
-    'default': {
+if in_heroku:
+    DATABASES = {'default': dj_database_url.config()}
+else:
+    DATABASES = {
+        'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'dm4bhhk1s05fo',
         'USER': 'pdewthmjkrhixd',
         'PASSWORD': '07eca89acf3f2ae917b0eefd9c980a83fa82076f71d70bbc47e8cd74f4328834',
         'HOST': 'ec2-23-21-46-94.compute-1.amazonaws.com',
         'PORT': '5432',
-        
+        }
     }
-}
 
 
 # Password validation
